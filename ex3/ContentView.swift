@@ -9,7 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack{
+            HStack(alignment:.top){
+                Text("Hello")
+                    .alignmentGuide(.top) {_ in
+                        0
+                    }
+                     
+                               Text("Good").font(Font.system(size: 35))
+                                .alignmentGuide(.top) {_ in
+                                    15
+                                }
+                
+                Text("Every")
+                    .alignmentGuide(.top) {_ in
+                        0
+                    }
+            }
+        }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
